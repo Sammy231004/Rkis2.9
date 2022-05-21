@@ -16,7 +16,7 @@ namespace WpfApp4.ViewModel
         public RelayCommand AddUser
         {
             get 
-            { return AddUser ??
+            { return _AddUser ??
                 (_AddUser = new RelayCommand((x) =>
                 {
                     HelpContext helpContext = new HelpContext();

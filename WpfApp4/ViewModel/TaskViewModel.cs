@@ -81,9 +81,11 @@ namespace WpfApp4.ViewModel
                             task.IduserAccept = User.AutoUser.Iduser;
                             task.IdstatusTask = 2;
                             HelpContext helpContext = new HelpContext();
+                            helpContext.Entry(task).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                             task.IdstatusTaskNavigation = helpContext.StatusTasks.Find(2);
                             helpContext.Tasks.Update(task);
                             helpContext.SaveChanges();
+                            Tasks = new ObservableCollection<Task>(helpContext.Tasks);
 
                         }
                     }

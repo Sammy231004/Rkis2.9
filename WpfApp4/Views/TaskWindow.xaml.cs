@@ -15,9 +15,7 @@ using WpfApp4.ViewModel;
 
 namespace WpfApp4
 {
-    /// <summary>
-    /// Логика взаимодействия для Window3.xaml
-    /// </summary>
+ 
     public partial class TaskWindow : Window
     {
         public TaskWindow()
